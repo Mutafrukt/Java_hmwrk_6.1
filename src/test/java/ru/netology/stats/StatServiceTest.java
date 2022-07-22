@@ -66,5 +66,17 @@ public class StatServiceTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void shouldFindMoreThenAvrgSales(){
+
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        StatService service = new StatService();
+
+        long expected = 5;
+        long actual = service.lessThenAvrgSales(sales);
+
+        Assertions.assertEquals(expected, actual);
+    }
+
 
 }
